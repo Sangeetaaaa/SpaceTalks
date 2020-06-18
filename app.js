@@ -128,11 +128,14 @@ app.post("/add", (req, res) => {
 })
 
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
 
 
 
-
-app.listen(3000 || process.env.port, function() {
+app.listen(port, function() {
   console.log("Server started on port 3000");
 });
