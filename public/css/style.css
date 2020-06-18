@@ -1,0 +1,214 @@
+
+body {
+  background-color: black;
+  text-align: center;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  font-family: 'Karla', sans-serif;
+  color: White;
+}
+
+h1 {
+  font-family: 'Karla', sans-serif;
+  transition: ease 0.6s;
+}
+
+/* .contact-heading {
+  margin-top: 100px;
+  transition: 0.6s ease;
+}
+
+.contact-heading-h3 {
+  width: 700px;
+  margin-left: 500px;
+  margin-bottom: 50px;
+  margin-top: 100px;
+  transition: 0.6s ease;
+} */
+
+.icon {
+  margin-top: 40px;
+  transition: 0.6s ease;
+}
+
+.navbar {
+  margin-left: 1200px;
+}
+
+.nav-link {
+  color: white;
+}
+
+@media (max-width: 1220px) {
+  .navbar {
+    margin-left: 0;
+  }
+}
+
+
+.Intro {
+  margin-top: 200px;
+  margin-left: 70px;
+  transition: 0.6s ease;
+}
+
+
+
+.heading {
+  font-family: 'Bowlby One SC', cursive;
+  letter-spacing: 7px;
+  transition: 0.6s ease;
+}
+
+.para {
+  font-family: 'Josefin Slab', serif;
+  letter-spacing: 2px;
+  font-size: 30px;
+
+  transition: ease 0.6s;
+}
+
+
+
+
+button {
+  margin-top: 100px;
+  color: white;
+  height: 200px;
+  width: 200px;
+  margin-left: 100px;
+  transition: 0.6s ease;
+  border-radius: 15px;
+}
+
+.Sun {
+  color: black;
+  background-image: url("https://t4.ftcdn.net/jpg/02/01/58/05/240_F_201580545_QjDkvGRgsMsyWS6zoe15rW0Gj0Eg7LIN.jpg");
+}
+
+.Earth {
+  background-image: url("https://t3.ftcdn.net/jpg/01/94/58/82/240_F_194588220_x3Z4mIUxHcfjjwoOoZco76tqnpyZFwE2.jpg");
+
+}
+
+.Moon {
+  background-image: url("https://t3.ftcdn.net/jpg/00/88/73/22/240_F_88732212_mtlQvAzNIsyMGb3bg33fxIrnR8hsmyRO.jpg");
+}
+
+.Mars {
+  background-image: url("https://t4.ftcdn.net/jpg/03/41/22/35/240_F_341223581_fjuMK6ZX1DcpuOzvKdwCPLYpUUtjnMqI.jpg");
+}
+
+
+.Phobos {
+  background-image: url("https://t4.ftcdn.net/jpg/03/28/37/69/240_F_328376997_Mir9A7grC5aWYhv1zG6oEnLFeaC4JDKV.jpg");
+}
+
+.add-new-card {
+  margin-top: 50px;
+  color: white;
+  text-decoration: underline;
+}
+
+.card {
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 20px;
+  transition: 0.6s ease;
+}
+
+.card-name {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.card-link {
+  color: white;
+  font-size: 30px;
+  margin-left: 1000px;
+  text-decoration: underline;
+}
+
+.card-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .card-link {
+    margin-left: 0;
+  }
+}
+
+
+.card-title-link {
+  color: black;
+}
+
+.card-title-link:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+
+.readmore:hover {
+  transform: scale(1.5);
+}
+
+.fullpage {
+  margin-top: 150px;
+  transition: 0.6s ease;
+}
+
+.fullpage-heading {
+  margin-bottom: 40px;
+  transition: 0.6s ease;
+}
+
+.icon {
+  margin-left: 30px;
+}
+
+.input {
+  border-radius: 25px;
+  border: 2px solid white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: white;
+}
+
+.add-input {
+  color: white;
+  height: 50px;
+  width: 700px;
+  max-width: 400px;
+  margin-top: 30px;
+  background: transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2 solid;
+}
+
+textarea.add-input {
+  height: 100px;
+}
+
+.add-button {
+  height: 40px;
+  width: 70px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.add-source {
+  margin-top: 40px;
+}
+
+
+
+#footer {
+  margin-top: 100px;
+  transition: 0.6s ease;
+}

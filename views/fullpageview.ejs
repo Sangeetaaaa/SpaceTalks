@@ -1,0 +1,10 @@
+<%- include("partials/header") -%>
+
+<div class="container fullpage">
+  <p><%= card.date %></p>
+  <h1 class="fullpage-heading"><%= card.title %></h1>
+  <p><%= card.content %></p>
+  <span>I got this artical from </span><a href="http://www.<%= card.source %>"><%= card.source %></a>
+</div>
+
+<%- include("partials/footer") -%>
