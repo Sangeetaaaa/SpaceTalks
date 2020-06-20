@@ -1,4 +1,4 @@
-
+//requiring modules
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -6,6 +6,9 @@ const mongoose = require("mongoose");
 
 
 
+
+
+//setting up the app
 const app = express()
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -14,7 +17,12 @@ app.use(express.static("public"));
 
 
 
-mongoose.connect("mongodb+srv://admin-sangeeta:Sangeeta31@cluster0-vllwc.mongodb.net/spaceDB",  { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
+
+
+
+// connecting to mongoose
+// mongodb+srv://admin-sangeeta:Sangeeta31@cluster0-vllwc.mongodb.net/spaceDB (global)
+mongoose.connect("mongodb://localhost:27017/spaceDB",  { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
 
 
 
@@ -22,6 +30,9 @@ mongoose.connect("mongodb+srv://admin-sangeeta:Sangeeta31@cluster0-vllwc.mongodb
 
 
 
+
+
+// creating a schema
 const cardSchema = new mongoose.Schema ({
   title: String,
   content: String,
@@ -38,18 +49,18 @@ const Card = new mongoose.model("Card", cardSchema);
 
 
 
-
-app.get("/", function (req, res) {
+//responsing with home.ejs file when / route is access
+app.get("/", (req, res) => {
   res.render("home")
-  });
+})
 
 
 
 
 
 
-
-app.get("/contact", function (req, res) {
+//responsing with contact.ejs file when /contact route is access
+app.get("/contact", (req, res) => {
   res.render("contact")
 })
 
@@ -57,32 +68,11 @@ app.get("/contact", function (req, res) {
 
 
 
-app.get("/planet", function (req, res) {
-  res.render("planet")
-});
 
-
-
-
-
-app.get("/add", function (req, res) {
-    res.render("add")
-});
-
-
-
-
-
-
-app.get("/card", function (req, res) {
-  Card.find({}, function (err, foundCards) {
-    if (!err) {
-      if (foundCards) {
-        res.render("card", {cards: foundCards, i: 0})
-      }
-    }
-  })
-})
+// //responsing with planet.ejs file when /planet route is access
+// app.get("/planet", function (req, res) {
+//   res.render("planet")
+// });
 
 
 
@@ -91,51 +81,83 @@ app.get("/card", function (req, res) {
 
 
 
-//parameters
-app.get("/card/:topic", function (req, res) {
-   Card.find(function (err, foundCards) {
-     if (!err) {
-       if (foundCards) {
-         for (var i = 0; i < foundCards.length; i++) {
-           if (i == req.params.topic) {
-             res.render("fullpageview", {card: foundCards[i]})
-           }
-         }
-       }
-     }
-   });
-});
 
 
-
-
-
-
-
-
-app.post("/add", (req, res) => {
-  const addFact = new Card ({
-    name: req.body.name,
-    title: req.body.title,
-    content: req.body.content,
-    source: req.body.source
+//send card.ejs when someone gets /card route
+app.get("/card", (req, res) => {
+  Card.find((err, foundCards) => {
+    !err &&  res.render("card", {cards: foundCards})
   });
-  addFact.save(function (err) {
-    if (!err) {
-      res.redirect("/card")
-    }
+});
+
+
+
+
+
+
+
+
+//parameters for fullpageview when clicked on a individual topic
+app.get("/card/:topic", (req, res) => {
+  Card.find((err, foundCards) => {
+   (!err) && foundCards.forEach((eachCard, i=0) => {
+       (i == req.params.topic) && res.render("fullpageview", {card: eachCard})
+    });
   });
-})
+});
 
 
+
+
+
+
+
+
+
+
+
+
+
+//setting a server, which is running the port 3000
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 8000;
+  port = 3000;
 }
 
 
-
-
-app.listen(port, function() {
+app.listen(port, () => {
   console.log("Server started on port 3000");
-});
+})
+
+
+
+
+
+
+//add a new fact
+// app.get("/add", (req, res) => {
+//     res.render("add")
+// })
+
+
+
+
+
+
+
+
+//constructing
+
+// app.post("/add", (req, res) => {
+//   const addFact = new Card ({
+//     name: req.body.name,
+//     title: req.body.title,
+//     content: req.body.content,
+//     source: req.body.source
+//   });
+//   addFact.save(function (err) {
+//     if (!err) {
+//       res.redirect("/card")
+//     }
+//   });
+// })
