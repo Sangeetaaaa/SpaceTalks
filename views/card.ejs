@@ -1,7 +1,6 @@
 <%- include("partials/header") -%>
 
 <!-- <p><a href="/add" class="add-new-card">Add Your Knowledge about space</a></p> -->
-
 <div class="container">
   <div class="card-deck">
       <div class="row">
@@ -10,7 +9,8 @@
              <div class="card">
                  <div class="card-coloums">
                  <div class="card-body">
-                 <h5 class="card-title"><a class="card-title-link" href="/card/<%= i %>"> <%= cards[i].title %></a></h5>
+                 <h5 class="card-title"><%= cards[i].title %></h5>
+                 <a href="/card/<%= i %>">read</a>
               </div>
                </div>
                </div>
