@@ -127,16 +127,15 @@ button {
 
 
 .explore-button {
-  color: black;
-  background-image: -webkit-linear-gradient(50deg, #eeeeee 40%, #ffffff 20%);
+  color: white;
+  background-image: url("https://t3.ftcdn.net/jpg/00/88/73/22/240_F_88732212_mtlQvAzNIsyMGb3bg33fxIrnR8hsmyRO.jpg");
+  background-size: cover;
   border-radius: 0 100px;
   height: 80px;
   font-weight: bolder;
 }
 
-.explore-button:hover {
-  background-image: -webkit-linear-gradient(50deg, #ffffff 40%, #eeeeee 20%);
-}
+
 
 @media (max-width: 1200px) {
   .card-link {
@@ -165,7 +164,6 @@ button {
 .fullpage {
   margin-top: 150px;
   transition: 0.6s ease;
-  font-size: 20px;
 }
 
 .fullpage-heading {
@@ -173,50 +171,12 @@ button {
   transition: 0.6s ease;
 }
 
-.icon {
-  margin-left: 30px;
-}
 
-.input {
-  border-radius: 25px;
-  border: 2px solid white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: transparent;
-  color: white;
-}
-
-.add-input {
-  color: white;
-  height: 50px;
-  width: 700px;
-  max-width: 400px;
-  margin-top: 30px;
-  background: transparent;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 2 solid;
-}
-
-textarea.add-input {
-  height: 100px;
-}
-
-.add-button {
-  height: 40px;
-  width: 70px;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.add-source {
-  margin-top: 40px;
-}
 
 
 
 #footer {
-  margin-top: 100px;
+  margin-top: 400px;
+  margin-bottom: 50px;
   transition: 0.6s ease;
 }
