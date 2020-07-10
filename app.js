@@ -22,7 +22,7 @@ app.use(express.static("public"));
 
 // connecting to mongoose
 // mongodb+srv://admin-sangeeta:Sangeeta31@cluster0-vllwc.mongodb.net/spaceDB (global)
-mongoose.connect("mongodb://localhost:27017/mongodb+srv://admin-sangeeta:Sangeeta31@cluster0-vllwc.mongodb.net/spaceDB",  { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
+mongoose.connect("mongodb+srv://admin-sangeeta:Sangeeta31@cluster0-vllwc.mongodb.net/spaceDB",  { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
 
 
 
