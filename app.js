@@ -3,6 +3,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const cloudinary = require("cloudinary");
+const multer = require("multer");
 
 
 
@@ -20,9 +22,8 @@ app.use(express.static("public"));
 
 
 
-// connecting to mongoose
-// mongodb+srv://admin-sangeeta:Sangeeta31@cluster0-vllwc.mongodb.net/spaceDB (global)
-mongoose.connect("mongodb+srv://admin-sangeeta:Sangeeta31@cluster0-vllwc.mongodb.net/spaceDB",  { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
+// connecting to mongoose and creating a new dataabase
+mongoose.connect("mongodb://localhost:27017/spaceDB",  { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
 
 
 
@@ -60,22 +61,6 @@ app.get("/", (req, res) => {
 
 
 
-//responsing with contact.ejs file when /contact route is access
-app.get("/contact", (req, res) => {
-  res.render("contact")
-})
-
-
-
-
-
-
-// //responsing with planet.ejs file when /planet route is access
-// app.get("/planet", function (req, res) {
-//   res.render("planet")
-// });
-
-
 
 
 
@@ -90,6 +75,8 @@ app.get("/card", (req, res) => {
     !err &&  res.render("card", {cards: foundCards})
   });
 });
+
+
 
 
 
@@ -129,36 +116,3 @@ if (port == null || port == "") {
 app.listen(port, () => {
   console.log("Server started on port 3000");
 })
-
-
-
-
-
-
-//add a new fact
-// app.get("/add", (req, res) => {
-//     res.render("add")
-// })
-
-
-
-
-
-
-
-
-//constructing
-
-// app.post("/add", (req, res) => {
-//   const addFact = new Card ({
-//     name: req.body.name,
-//     title: req.body.title,
-//     content: req.body.content,
-//     source: req.body.source
-//   });
-//   addFact.save(function (err) {
-//     if (!err) {
-//       res.redirect("/card")
-//     }
-//   });
-// })

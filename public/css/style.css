@@ -14,37 +14,7 @@ h1 {
   transition: ease 0.6s;
 }
 
-.contact-heading {
-  margin-top: 100px;
-  transition: 0.6s ease;
-}
 
-.contact-heading-h3 {
-  width: 700px;
-  margin-left: 500px;
-  margin-bottom: 50px;
-  margin-top: 100px;
-  transition: 0.6s ease;
-}
-
-.icon {
-  margin-top: 40px;
-  transition: 0.6s ease;
-}
-
-.navbar {
-  margin-left: 1200px;
-}
-
-.nav-link {
-  color: white;
-}
-
-@media (max-width: 1220px) {
-  .navbar {
-    margin-left: 0;
-  }
-}
 
 
 .Intro {
@@ -69,40 +39,6 @@ h1 {
 }
 
 
-
-
-button {
-  margin-top: 100px;
-  color: white;
-  height: 200px;
-  width: 200px;
-  margin-left: 100px;
-  transition: 0.6s ease;
-  border-radius: 15px;
-}
-
-.Sun {
-  color: black;
-  background-image: url("https://t4.ftcdn.net/jpg/02/01/58/05/240_F_201580545_QjDkvGRgsMsyWS6zoe15rW0Gj0Eg7LIN.jpg");
-}
-
-.Earth {
-  background-image: url("https://t3.ftcdn.net/jpg/01/94/58/82/240_F_194588220_x3Z4mIUxHcfjjwoOoZco76tqnpyZFwE2.jpg");
-
-}
-
-.Moon {
-  background-image: url("https://t3.ftcdn.net/jpg/00/88/73/22/240_F_88732212_mtlQvAzNIsyMGb3bg33fxIrnR8hsmyRO.jpg");
-}
-
-.Mars {
-  background-image: url("https://t4.ftcdn.net/jpg/03/41/22/35/240_F_341223581_fjuMK6ZX1DcpuOzvKdwCPLYpUUtjnMqI.jpg");
-}
-
-
-.Phobos {
-  background-image: url("https://t4.ftcdn.net/jpg/03/28/37/69/240_F_328376997_Mir9A7grC5aWYhv1zG6oEnLFeaC4JDKV.jpg");
-}
 
 .add-new-card {
   margin-top: 50px;
@@ -132,6 +68,7 @@ button {
   background-size: cover;
   border-radius: 0 100px;
   height: 80px;
+  width: 200px;
   font-weight: bolder;
 }
 
@@ -170,7 +107,6 @@ button {
   margin-bottom: 40px;
   transition: 0.6s ease;
 }
-
 
 
 
